@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ################ header styling suru ################### */
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-box {
+    z-index: 10;
+    padding: 2.5em;
+    border-radius: 10px;
+    width: 25%;
+    background-color: rgb(255,255,255);
+}
+.main-box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.main-box form input{
+    display: block;
+    font-size: 1.6rem;
+    margin: 0.5em;
+    padding: 0.8em;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid grey;
+}
+.main-box form input[type="submit"]{
+    border-radius: 25px;
+    background-color: rgb(230,0,35);
+    color: white;
+    width: 100%;
+    margin: 1em 0;
+    border: 0;
+}
+.main-box form input[type="submit"]:hover{
+    background-color: rgb(174, 1, 27);
+}
+h2.head{
+    text-align: center;
+    font-size:1.6rem;
+    font-weight: 400;
+    padding: 0.5em;
+}
+h2.title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-size: x-large;
+}
+button.btn{
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    background-color: rgb(230,0,35);
+    color: white;
+    outline: 0;
+    border: 0;
+    font-size: 1.6rem;
+    background-color:rgb(239,239,239);
+    color: black;
+    padding: 0.8em;
+    margin: 1em 0;
+}
+button.btn:hover{
+    background-color:rgb(214, 214, 214);
+
+}
+h3.h3{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+img.logo{
+    display: inline-block;
+    height: 46px;
+    width: 80px;
+    margin: auto;
+}
+.logo-box{
+    width: 100%;
+    text-align: center;
+    margin: 1.2em 0;
+}
+a{
+    text-decoration: none;
+}
+h3.h32{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0.5em;
+}
+h3.h32 a{
+    color: black;
+}

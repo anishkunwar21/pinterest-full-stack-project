@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/postinfo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/javascripts/postinfo.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-box">
+            <img src="/images/pinnnn.png" class="logo">
+            </div>
+        <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/logout"><button>Log Out</button></a></li>
+            <li><a href="/createpin"><button class="btn">Create Pin</button></a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="main-flex-container">
+            <div class="img-box">
+                <img src="/images/pins/<%=post.imageURL%>">
+            </div>
+           
+            <div class="text-box">
+                <div class="text-box-content">
+                <h1><%=post.caption%></h1>
+                <p><%=post.description%></p>
+                </div>
+                <h3 class="h3">Posted By:</h3>
+                <div class="profile-info">
+                    <div class="img-and-name">
+                        <%
+                        if(!post.userId.profileImage){%>
+                            <div class="img-ko-box">
+                            <h3><%=post.userId.fullName[0]%></h3>
+                        </div>
+                        <%}else{%>
+                        <div class="img-ko-box">
+                            <img src="/images/profilepictures/<%=post.userId.profileImage%>">
+                        </div>
+                        <%}
+                        %>
+                         
+                        <div class="name-box">
+                            <h3><%=post.userId.fullName%></h3>
+                            <p><%=post.userId.username%></p>
+                        </div>
+                    </div>
+
+                    
+                        
+                </div>
+            </div>
+        </div>
+    </header>
+    
+</body>
+</html>

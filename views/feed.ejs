@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="/javascripts/feed.js" defer></script>
+
+</head>
+<body>
+    <!-- <a href="/logout"><button>Log Out</button></a> -->
+    <nav>
+        <div class="logo-box">
+            <img src="/images/pinnnn.png" class="logo">
+            </div>
+        <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/logout"><button>Log Out</button></a></li>
+            <li><a href="/createpin"><button class="btn">Create Pin</button></a></li>
+        </ul>
+    </nav>
+    <h2 class="hehe">Layout Looks Bad? No Problem. Just Simply Reload The Page ;)</h2>
+    <header>
+        <div class="posts-flex-container">
+            <%if(allPosts){%>
+            <%
+            allPosts.forEach(function(pin){ %>
+                <div class="posts-box">
+                    <img src="/images/pins/<%=pin.imageURL%>">
+                <button class="btn-hehe">See More</button>
+                <form action="/allpostinfo" method="post" hidden class="form">
+                    <input type="text" value="<%=pin._id%>" name="postid">
+                    </form>
+            </div>
+            <% })
+             %>
+             <%}else{%>
+                <div class="posts-box">
+                <img src="/images/pins/2e6a31c0-12ca-441f-87d1-e11213c47f4d-wallaaaaaaa.jpg">
+            </div>
+             <%}
+             %>
+            </div>
+    </header>
+    </body>
+    </html>

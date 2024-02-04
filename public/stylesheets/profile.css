@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ############### navbar styling suru ################## */
+h1.logo{
+    font-size: 3.2rem;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    box-shadow: 0px 0px 25px 0px #0000003b;
+    opacity: 0.9;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+nav ul li{
+    margin: auto;
+    padding: 1em;
+    list-style: none;
+}
+nav ul li a button{
+    background-color: rgb(230,0,35);
+    color: white;
+    padding: 0.5em 0.7em;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+}
+.logo-box img{
+    display: inline-block;
+    height: 46px;
+    width: 80px;
+    margin: auto;
+}
+/* ########## header styling suru ########### */
+header{
+    min-height: 90vh;
+    width: 100%;
+}
+div.profile-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4em;
+}
+div.profile-card h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+div.profile-card h4{
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+div.dp-box{
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    margin: auto;
+    position: relative;
+    border: 1px solid rgb(178, 178, 178);
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.dp-box img{
+    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}
+div.dp-box .icon{
+    display: block;
+    position: absolute;
+    top:50px;
+    left: 50px;
+    z-index: 200;
+}
+.txt-box{
+    text-align: center;
+}
+.txt-box h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 2em;
+}
+.txt-box button{
+    display: inline-block;
+    font-size: 1.6rem;
+    background-color: rgb(230,0,35);
+    color: white;
+    outline: none;
+    border: none;
+    margin-top:1em;
+    padding: 0.7em 0.9em;
+    border-radius: 25px;
+}
+.posts-flex-container{
+    display: flex;
+    margin: 1.5em;
+    padding: 0.3em;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.posts-box{
+    height: 156px;
+    width: 240px;
+    border-radius: 15px;
+    margin: 1em;
+    position: relative;
+}
+.posts-box::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.352);
+    opacity: 0;
+    z-index: 2;
+    transition: all ease-in-out 0.5s;
+
+}
+
+.posts-box .posts-box-btn{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+.posts-box img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.btn-hehe{
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate( -50% , -50% );
+    background-color: rgb(230,0,35);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0.5em 0.7em;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 10;
+    transition: all ease-in-out 0.5s;
+}
+.posts-box:hover .btn-hehe{
+    opacity: 1;
+}
+.posts-box:hover::after{
+    opacity: 1;
+}
