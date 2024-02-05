@@ -113,3 +113,7 @@ h3.h32{
 h3.h32 a{
     color: black;
 }
+p.error{
+    font-size: 1.5rem;
+    color:red;
+}

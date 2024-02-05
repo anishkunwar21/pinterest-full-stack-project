@@ -9,20 +9,12 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 const expressSession=require("express-session");
+const flash=require("connect-flash");
 const passport = require('passport');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-
-
-
-
-
-
-
-
-
+app.use(flash());
 //allowing server to create sessions(sessions=anything that is saved in a server);
 app.use(expressSession({
   resave:false,

@@ -19,6 +19,11 @@
             <form action="/login" method="post">
                 <input type="text" name="username" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
+                <%
+                if(logInFailureMsg.length>0){%>
+                    <p class="error"><%=logInFailureMsg[0]%></p>
+                <%}
+                %>
                 <input type="submit" value="Log In">
             </form>
             <h3 class="h3">By continuing, you agree to Pinterest's <b>Business Terms of Service</b> and acknowledge you've read our <b>Privacy Policy</b>. <b>Notice at collection</b></h3>

@@ -12,7 +12,8 @@ router.get('/', function(req, res, next) {
   res.render('register');
 });
 router.get("/login",function(req,res){
-  res.render("login");
+  const logInFailureMsg=req.flash("error");
+  res.render("login",{logInFailureMsg});
 });
 router.get("/createpin",isLoggedIn,async function(req,res){
   const username=req.session.passport.user;
@@ -63,7 +64,7 @@ router.post("/register",function(req,res){
 router.post("/login",passport.authenticate("local",{
   successRedirect:"/profile",
   failureRedirect:"/login",
-  // failureFlash:true
+  failureFlash:true,
 }),function(req,res){});
 
 //for log out 
